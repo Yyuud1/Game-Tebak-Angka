@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Viga&display=swap');
+:root {
+    --bayangan: -5px -5px 8px #3b3b45,
+    5px 5px 8px #5c5d6b;
+    --hitam:  #4b4c58;
+    --white: #eff0f4;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--hitam);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--hitam);
+    color: #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+    z-index: 10;
+}
+
+  
+  li {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 120%;
+  }
+  
+  .contents {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 400px 1fr;
+    width: 80%;
+    margin: 8rem auto;
+    display: grid;
+    gap: 25px;
+    color: #ddd;
+  }
+  
+  .child-content {
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+  }
+  
+  .button {
+    cursor: pointer;
+  }
+  
+  .answer-button {
+    padding: 2%;
+   
+  }
+  
+  #total-stats {
+    grid-column: 1/3;
+    box-shadow: var(--bayangan);
+    transition: .3s;
+  }
+
+  #total-stats:hover,
+  #gameboard:hover,
+  #session-stats:hover,
+  #instructions:hover {
+    transform: translateY(-10px);
+  }
+
+  #gameboard {
+    grid-column: 1/4;
+    grid-row: 2;
+    box-shadow: var(--bayangan);
+    transition: .3s;
+    
+  }
+  
+  #session-stats {
+    grid-column: 3/4;
+    box-shadow: var(--bayangan);
+    transition: .3s;
+    
+  }
+  
+  #instructions {
+    grid-column: 1/4;
+    grid-row: 1;
+    transition: .3s;
+    box-shadow: var(--bayangan);
+  }
+  
+  #instructions h2 {
+    color: var(--white);
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+  }
+
+  @media only screen and (max-width: 1024px){
+    #total-stats {
+      width: 100%;
+      grid-column: 1/4;
+    }
+    #session-stats {
+      width: 100%;
+      grid-column: 1/4;
+    }
+
+    #instructions {
+      grid-column: 1/4;
+      width: 100%;
+    }
+    
+    #gameboard {
+      grid-column: 1/4;
+      width: 100%;
+    }
+  }
